@@ -1,0 +1,7 @@
+C:\Users\mario\source\repos\UserDefinedFunction\UserDefinedFunction\bin\Debug\UserDefinedFunction.exe.config
+C:\Users\mario\source\repos\UserDefinedFunction\UserDefinedFunction\bin\Debug\UserDefinedFunction.exe
+C:\Users\mario\source\repos\UserDefinedFunction\UserDefinedFunction\bin\Debug\UserDefinedFunction.pdb
+C:\Users\mario\source\repos\UserDefinedFunction\UserDefinedFunction\obj\Debug\UserDefinedFunction.csproj.AssemblyReference.cache
+C:\Users\mario\source\repos\UserDefinedFunction\UserDefinedFunction\obj\Debug\UserDefinedFunction.csproj.CoreCompileInputs.cache
+C:\Users\mario\source\repos\UserDefinedFunction\UserDefinedFunction\obj\Debug\UserDefinedFunction.exe
+C:\Users\mario\source\repos\UserDefinedFunction\UserDefinedFunction\obj\Debug\UserDefinedFunction.pdb
