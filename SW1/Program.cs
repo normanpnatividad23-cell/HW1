@@ -2,46 +2,53 @@
 
 class Program
 {
-   
-    static bool IsPrime(int number)
+    static bool IsPrime(int value)
     {
-        if (number <= 1) return false;
-        for (int i = 2; i <= Math.Sqrt(number); i++)
+        if (value <= 1) return false;
+        for (int divisor = 2; divisor <= Math.Sqrt(value); divisor++)
         {
-            if (number % i == 0) return false;
+            if (value % divisor == 0) return false;
         }
         return true;
     }
 
-
-    static (double peso, double yen) ConvertCurrency(double dollar)
+    static void CheckNumbers(string numberList)
     {
-        double peso = dollar * 57.17;
-        double yen = dollar * 146.67;
-        return (peso, yen);
+        string[] items = numberList.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+        Console.WriteLine();
+        for (int index = 0; index < items.Length; index++)
+        {
+            int currentNumber = int.Parse(items[index]);
+            string type = IsPrime(currentNumber) ? "Prime" : "Composite";
+            Console.WriteLine($"{index + 1}.  {currentNumber,-5}   {type}");
+        }
+    }
+
+    static (double pesoValue, double yenValue) ConvertCurrency(double dollarValue)
+    {
+        double pesoValue = dollarValue * 57.17;
+        double yenValue = dollarValue * 146.67;
+        return (pesoValue, yenValue);
+    }
+
+    static void ShowCurrencyConversion(double dollarValue)
+    {
+        var (pesoValue, yenValue) = ConvertCurrency(dollarValue);
+
+        Console.WriteLine("\n{0,-12}{1,-18}{2}", "Dollar($)", "Phil Peso(P)", "Jpn Yen(Y)");
+        Console.WriteLine("{0,-12:N0}{1,-18:N0}{2:N0}", dollarValue, pesoValue, yenValue);
     }
 
     static void Main()
     {
         Console.Write("Enter string: ");
-        string input = Console.ReadLine();
-        string[] numbers = input.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-
-        Console.WriteLine();
-        for (int i = 0; i < numbers.Length; i++)
-        {
-            int num = int.Parse(numbers[i]);
-            string result = IsPrime(num) ? "Prime" : "Composite";
-            Console.WriteLine($"{i + 1}.  {num,-5}   {result}");
-        }
+        string numberList = Console.ReadLine();
+        CheckNumbers(numberList);
 
         Console.Write("\nEnter currency in ($): ");
-        string currencyInput = Console.ReadLine().Replace(",", "");
-        double dollar = double.Parse(currencyInput);
-
-        var (peso, yen) = ConvertCurrency(dollar);
-
-        Console.WriteLine("\n{0,-12}{1,-18}{2}", "Dollar($)", "Phil Peso(P)", "Jpn Yen(Y)");
-        Console.WriteLine("{0,-12:N0}{1,-18:N0}{2:N0}", dollar, peso, yen);
+        string userInput = Console.ReadLine().Replace(",", "");
+        double dollarValue = double.Parse(userInput);
+        ShowCurrencyConversion(dollarValue);
     }
 }
