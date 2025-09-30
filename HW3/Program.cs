@@ -3,32 +3,33 @@ using System.Collections.Generic;
 
 class Program
 {
-    static Dictionary<char, int> GetCharFrequency(string input)
+    static Dictionary<char, int> CountChars(string text)
     {
-        Dictionary<char, int> frequency = new Dictionary<char, int>();
-        foreach (char c in input)
+        var map = new Dictionary<char, int>();
+        foreach (char c in text.Replace(" ", "").Replace(",", ""))
         {
-            if (c == ' ' || c == ',') continue;
-            if (frequency.ContainsKey(c))
-                frequency[c]++;
+            if (map.ContainsKey(c))
+                map[c]++;
             else
-                frequency[c] = 1;
+                map[c] = 1;
         }
-        return frequency;
+        return map;
     }
 
-    static void Main(string[] args)
+    static void Main()
     {
         Console.Write("Enter string: ");
-        string input = Console.ReadLine();
-        string[] parts = input.Split(',');
+        string line = Console.ReadLine();
+        string[] items = line.Split(',');
 
-        foreach (string part in parts)
+        foreach (string item in items)
         {
-            Dictionary<char, int> result = GetCharFrequency(part.Trim());
-            foreach (var kvp in result)
+            var result = CountChars(item.Trim());
+            int i = 0;
+            foreach (var pair in result)
             {
-                Console.Write(kvp.Key + "=" + kvp.Value + " ");
+                Console.Write(pair.Key + "=" + pair.Value);
+                if (++i < result.Count) Console.Write(", ");
             }
             Console.WriteLine();
         }

@@ -1,0 +1,7 @@
+C:\Users\mario\source\repos\SW1\SW1\bin\Debug\SW1.exe.config
+C:\Users\mario\source\repos\SW1\SW1\bin\Debug\SW1.exe
+C:\Users\mario\source\repos\SW1\SW1\bin\Debug\SW1.pdb
+C:\Users\mario\source\repos\SW1\SW1\obj\Debug\SW1.csproj.AssemblyReference.cache
+C:\Users\mario\source\repos\SW1\SW1\obj\Debug\SW1.csproj.CoreCompileInputs.cache
+C:\Users\mario\source\repos\SW1\SW1\obj\Debug\SW1.exe
+C:\Users\mario\source\repos\SW1\SW1\obj\Debug\SW1.pdb
