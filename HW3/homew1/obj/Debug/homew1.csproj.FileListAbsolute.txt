@@ -1,7 +1,0 @@
-C:\Users\mario\source\repos\homew1\homew1\bin\Debug\homew1.exe.config
-C:\Users\mario\source\repos\homew1\homew1\bin\Debug\homew1.exe
-C:\Users\mario\source\repos\homew1\homew1\bin\Debug\homew1.pdb
-C:\Users\mario\source\repos\homew1\homew1\obj\Debug\homew1.csproj.AssemblyReference.cache
-C:\Users\mario\source\repos\homew1\homew1\obj\Debug\homew1.csproj.CoreCompileInputs.cache
-C:\Users\mario\source\repos\homew1\homew1\obj\Debug\homew1.exe
-C:\Users\mario\source\repos\homew1\homew1\obj\Debug\homew1.pdb
